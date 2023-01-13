@@ -1,13 +1,82 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+  background-color: #ECECEA;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+.game{
+  display: flex;
+  flex-direction: row;
+}
+
+.cell {
+  background-color: aqua;
+  display:grid;
+  place-content: center;
+  width:100px;
+  height:100px;
+}
+.cell .chess-peice-image {
+  width:80px;
+
+}
+
+  .cell-black{
+  background-color:burlywood;
+  width: 100px;
+  height: 100px;
+  }
+
+  .cell-white{
+  background-color: aqua;
+  width: 100px;
+  height: 100px;
+  }
+  .cell-selected{
+    background-color:aqua;
+    width: 100px;
+    height:100px;
+  }
+
+.cell:focus {
+  outline: none;
+}
+#chessboard{
+  display: grid;
+  grid-template-columns: repeat(8, 100px);
+  grid-template-rows: repeat(8, 100px);
+  flex-wrap: wrap;
+  width:801px;
+  height:801px;
+  background-color: black;
+}
+
+
+#chessboard .cell-black{
+  background-color: yellowgreen;
+
+}
+
+#chessboard .cell-white{
+  background-color:darkviolet;
+
+}
+
+
+.button-div{
+  height: auto;
+  width: auto;
 }
