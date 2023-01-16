@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import chessBoardWithPeices from "../helpers/chessBoardWithPeices";
 import chessBoardData from "../helpers/chessBoardData";
 import isValidMove from "../helpers/isValidMove"
+import RulesTable from "./notes"
 
 
 export default function Board() {
@@ -155,6 +156,8 @@ export default function Board() {
         // fallenSoldiersBlock.appendChild(endDivPiece)
         
       }
+    } else {
+      alert("Invalid Move")
     }
 
     // const validMove = isValidMove(pieceName, startRow, startColumn, endRow, endColumn) 
@@ -180,8 +183,13 @@ export default function Board() {
   // console.log(cellArray);
   // console.log(sq);
   return (
+    <div>
+      <h2 className="player-indicator">{player}'s turn</h2>
+      <div className="button-div">
+      <button className="movePiece-button" onClick={handleDoubleClick}
+      >Move Piece</button>
+      </div>
     <div id="chessboard">
-
       {sq.map(obj => (
         <>
           {obj}
@@ -197,12 +205,9 @@ export default function Board() {
                 
               </div>
             ))} */}
-      <div className="button-div">
-      <button onClick={handleDoubleClick}
-      >Move Piece</button>
-      <h2>{player}'s turn</h2>
-      </div>
-
+      
+    </div>
+    <RulesTable />
     </div>
   )
 }

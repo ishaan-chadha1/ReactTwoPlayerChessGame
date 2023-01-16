@@ -24,6 +24,9 @@ export default function isValidMove(piece, startRow, startColumn, endRow, endCol
     if ((endColumn === startColumn )) {
       return true;
     } 
+    if (isValidBishopMove(startRow, startColumn, endRow, endColumn)){
+        return true;        
+    }
     if ((endRow === startRow + 2) || (endRow === startRow + 1)  || (endRow === startRow - 1 ) || (endRow === startRow - 2)){
       return true;
     }

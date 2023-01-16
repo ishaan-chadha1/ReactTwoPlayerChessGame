@@ -1,6 +1,6 @@
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  /* margin: 20px; */
   background-color: #ECECEA;
 }
 
@@ -77,6 +77,15 @@ ol, ul {
 
 
 .button-div{
-  height: auto;
-  width: auto;
+  /* height: 100px; */
+  width: 800px;
+}
+.player-indicator{
+  font-size: x-large;
+  display: grid;
+  text-align:center;
+}
+.movePiece-button{
+  width: inherit;
+  height: 50px;
 }
