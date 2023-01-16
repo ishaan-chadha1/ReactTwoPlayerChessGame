@@ -2,24 +2,24 @@ import React from "react";
 const rules = [
   {
     id: 1,
-    rule: "Pawns can move forward one or two spaces on their first move.",
+    rule: "Click on an Piece and select a square on the board and click the move piece button. If a square contains a piece click on the area in the square around it, in order to capture and shift pieces.",
     example: "On its first move, a pawn can move from e2 to e4 or e3."
-  },
-  {
-    id: 2,
-    rule: "Pawns can only capture by moving diagonally.",
-    example: "A pawn on e4 can capture a piece on d5 or f5, but not on e5."
-  },
-  {
-    id: 3,
-    rule: "A pawn that reaches the opposite end of the board can be promoted to a queen, rook, bishop, or knight.",
-    example: "A pawn that reaches the 8th rank can be promoted to a queen, rook, bishop, or knight of the same color."
-  },
-  {
-    id: 4,
-    rule: "The king is in check when it is under attack by an opponent's piece.",
-    example: "If a black rook is attacking a white king on d1, the white king is in check."
   }
+//   {
+//     id: 2,
+//     rule: "Pawns can only capture by moving diagonally.",
+//     example: "A pawn on e4 can capture a piece on d5 or f5, but not on e5."
+//   },
+//   {
+//     id: 3,
+//     rule: "A pawn that reaches the opposite end of the board can be promoted to a queen, rook, bishop, or knight.",
+//     example: "A pawn that reaches the 8th rank can be promoted to a queen, rook, bishop, or knight of the same color."
+//   },
+//   {
+//     id: 4,
+//     rule: "The king is in check when it is under attack by an opponent's piece.",
+//     example: "If a black rook is attacking a white king on d1, the white king is in check."
+//   }
 ];
 
 function RulesTable() {
