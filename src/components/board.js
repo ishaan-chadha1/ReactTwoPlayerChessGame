@@ -84,7 +84,7 @@ export default function Board() {
         console.log(pieceToMove.title)
         const parent = pieceToMove.parentNode;
         console.log(parent.id)
-        alert("image was clicked");
+//         alert("image was clicked");
       });
       // console.log("Piece image:",pieceImg)
       // console.log("image Div:",imgDiv)
@@ -103,12 +103,12 @@ export default function Board() {
   useEffect(() => {
     divs.forEach(div => {
       div.addEventListener('click', handleSingleClick);
-      // div.addEventListener('dblclick', handleDoubleClick);
+      div.addEventListener('dblclick', handleDoubleClick);
     });
     return () => {
       divs.forEach(div => {
         div.removeEventListener('click', handleSingleClick);
-        // div.removeEventListener('dblclick', handleDoubleClick);
+        div.removeEventListener('dblclick', handleDoubleClick);
       });
     }
   }, [divs]);
@@ -157,7 +157,7 @@ export default function Board() {
         
       }
     } else {
-      alert("Invalid Move")
+//       alert("Invalid Move")
     }
 
     // const validMove = isValidMove(pieceName, startRow, startColumn, endRow, endColumn) 
