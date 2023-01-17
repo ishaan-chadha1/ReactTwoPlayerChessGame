@@ -2,8 +2,8 @@ import React from "react";
 const rules = [
   {
     id: 1,
-    rule: "Click on an Piece and select a square on the board and click the move piece button. If a square contains a piece click on the area in the square around it, in order to capture and shift pieces.",
-    example: "On its first move, a pawn can move from e2 to e4 or e3."
+    rule: "Single Click on a Piece and Double Click on a Square to Move it to that Square. ",
+    example: "Clicking on A pawn and Double Clicking on a Valid Empty Square will move it."
   }
 //   {
 //     id: 2,
