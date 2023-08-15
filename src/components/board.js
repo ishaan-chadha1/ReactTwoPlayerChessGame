@@ -4,6 +4,8 @@ import chessBoardWithPeices from "../helpers/chessBoardWithPeices";
 import chessBoardData from "../helpers/chessBoardData";
 import isValidMove from "../helpers/isValidMove"
 import RulesTable from "./notes"
+import "./board.css"; // Importing the CSS file for styling
+
 
 
 export default function Board() {
@@ -183,31 +185,20 @@ export default function Board() {
   // console.log(cellArray);
   // console.log(sq);
   return (
-    <div>
+    <div className="board-container"> {/* Added a class to center align */}
       <h2 className="player-indicator">{player}'s turn</h2>
       <div className="button-div">
-      <button className="movePiece-button" onClick={handleDoubleClick}
-      >Move Piece</button>
+        <button className="movePiece-button" onClick={handleDoubleClick}>Move Piece</button>
       </div>
-    <div id="chessboard">
-      {sq.map(obj => (
-        <>
-          {obj}
-        </>
-      ))}
-      {/* <MyComponent />  */}
-      {/* {pieces.map(piece => ( 
-                <div key={piece.id}>
-                {piece.title}: ({piece.position.x}, {piece.position.y})
-                <button onClick={() => updatePosition(4 , 7, 7)}>
-                  Update position
-                </button>
-                
-              </div>
-            ))} */}
-      
-    </div>
-    <RulesTable />
+      <div id="chessboard" className="chessboard"> {/* Added a class for styling */}
+        {sq.map(obj => (
+          <>
+            {obj}
+          </>
+        ))}
+      </div>
+      <RulesTable />
     </div>
   )
+
 }
